@@ -23,7 +23,8 @@ def test_requests_connection_error_is_recorded():
     requests = pytest.importorskip("requests")
     with callscope.scope("t") as s, pytest.raises(requests.ConnectionError):
         requests.get("http://127.0.0.1:9/", timeout=1)
-    assert s.calls[0].error.startswith("ConnectionError")
+    # Refused on Linux/macOS, times out on Windows; both must be recorded.
+    assert s.calls[0].error.startswith(("ConnectionError", "ConnectTimeout"))
 
 
 def test_httpx_sync(http_server):
