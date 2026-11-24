@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "callscope"
+dynamic = ["version"]
+description = "See every HTTP, SQL and Redis call your Python app makes: live, grouped per request, linked to the line of code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Vignesh Selvaraj" }]
+keywords = ["debugging", "devtools", "http", "sql", "redis", "n+1", "profiling", "observability"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Framework :: Django",
+    "Framework :: FastAPI",
+    "Framework :: Flask",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7",
+    "requests>=2.25",
+    "httpx>=0.24",
+    "sqlalchemy>=1.4",
+    "redis>=4.5",
+    "fakeredis>=2.10",
+    "django>=4.2",
+    "flask>=2.2",
+    "fastapi>=0.100",
+]
+docs = [
+    "mkdocs-material>=9.5",
+]
+
+[project.scripts]
+callscope = "callscope.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Vigneshselvaraj1811/callscope"
+Documentation = "https://vigneshselvaraj1811.github.io/callscope/"
+Source = "https://github.com/Vigneshselvaraj1811/callscope"
+Issues = "https://github.com/Vigneshselvaraj1811/callscope/issues"
+Changelog = "https://github.com/Vigneshselvaraj1811/callscope/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/callscope/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/callscope"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["SIM105"]  # explicit try/except/pass is clearer in hot paths

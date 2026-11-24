@@ -1,0 +1,20 @@
+name: Feature request
+description: A new feature, or a library you'd like callscope to support
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you're trying to do and why the current version doesn't help.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to happen?
+  - type: input
+    id: library
+    attributes:
+      label: Library or framework (if any)
+      placeholder: "e.g. aiohttp, psycopg, Celery"

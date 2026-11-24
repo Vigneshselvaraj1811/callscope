@@ -1,0 +1,36 @@
+name: Bug report
+description: Something doesn't work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please **remove any secrets** (tokens, passwords, customer data) from logs before pasting.
+        Security problems go to the [private advisory form](https://github.com/Vigneshselvaraj1811/callscope/security/advisories/new), not here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Smallest code that reproduces it
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: callscope output or traceback
+      render: text
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: callscope, Python, OS, and the framework or library involved
+      placeholder: "callscope 0.1.0, Python 3.12, macOS 15, FastAPI 0.115, SQLAlchemy 2.0"
+    validations:
+      required: true
