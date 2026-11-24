@@ -7,7 +7,7 @@ No API token is created, stored or shared.
 
 1. Push this repository to GitHub.
 2. On PyPI, go to **Your account → Publishing → Add a new pending publisher** and fill in:
-   - PyPI project name: `callscope`
+   - PyPI project name: `pycallscope`
    - Owner: your GitHub user or organization
    - Repository name: `callscope`
    - Workflow name: `publish.yml`
@@ -27,7 +27,7 @@ No API token is created, stored or shared.
 ```console
 uv build
 uvx twine upload --repository testpypi dist/*
-pip install --index-url https://test.pypi.org/simple/ callscope
+pip install --index-url https://test.pypi.org/simple/ pycallscope
 ```
 
 This one needs a TestPyPI token in your local `~/.pypirc` (`chmod 600`). Never paste tokens into chats or commit them.

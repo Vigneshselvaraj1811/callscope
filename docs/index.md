@@ -21,7 +21,7 @@ Most slow endpoints aren't slow because of Python. They make **too many calls**:
 
 <div class="grid" markdown>
 
-- :material-lightning-bolt: **Zero setup.** `pip install callscope`, then `callscope run app.py`. No account, no server, no config file.
+- :material-lightning-bolt: **Zero setup.** `pip install pycallscope`, then `callscope run app.py`. No account, no server, no config file.
 - :material-puzzle: **Every library, one tool.** `requests`, `httpx`, `sqlite3`, SQLAlchemy, the Django ORM and `redis`, in one stream.
 - :material-map-marker: **Points at your code.** Every call shows the line in *your* code that made it, not a line deep inside a library.
 - :material-alert: **Finds problems for you.** N+1 queries, duplicate calls and slow calls are flagged per request.
@@ -33,7 +33,7 @@ Most slow endpoints aren't slow because of Python. They make **too many calls**:
 ## Install
 
 ```console
-pip install callscope
+pip install pycallscope
 ```
 
 Then read [Getting started](getting-started.md).

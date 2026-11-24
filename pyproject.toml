@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "callscope"
+name = "pycallscope"
 dynamic = ["version"]
 description = "See every HTTP, SQL and Redis call your Python app makes: live, grouped per request, linked to the line of code."
 readme = "README.md"

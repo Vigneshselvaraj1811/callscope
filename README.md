@@ -1,8 +1,8 @@
 # callscope
 
 [![CI](https://github.com/Vigneshselvaraj1811/callscope/actions/workflows/ci.yml/badge.svg)](https://github.com/Vigneshselvaraj1811/callscope/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/callscope.svg)](https://pypi.org/project/callscope/)
-[![Python](https://img.shields.io/pypi/pyversions/callscope.svg)](https://pypi.org/project/callscope/)
+[![PyPI](https://img.shields.io/pypi/v/pycallscope.svg)](https://pypi.org/project/pycallscope/)
+[![Python](https://img.shields.io/pypi/pyversions/pycallscope.svg)](https://pypi.org/project/pycallscope/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **[Documentation](https://vigneshselvaraj1811.github.io/callscope/)** · **[Getting started](https://vigneshselvaraj1811.github.io/callscope/getting-started/)** · **[Changelog](CHANGELOG.md)**
@@ -36,8 +36,10 @@ Most performance bugs in web apps aren't slow Python. They're **too many calls**
 ## Install
 
 ```console
-pip install callscope
+pip install pycallscope
 ```
+
+The package on PyPI is `pycallscope`. You import it as `callscope` and run it as `callscope`.
 
 callscope is a development tool. Keep it in your dev dependencies, not in production.
 

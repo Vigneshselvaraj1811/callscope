@@ -3,27 +3,29 @@
 ## 1. Install
 
 ```console
-pip install callscope
+pip install pycallscope
 ```
+
+The package on PyPI is named `pycallscope`. In code you `import callscope`, and the command is `callscope`.
 
 callscope is a development tool. Add it to your dev dependencies, not production ones:
 
 === "uv"
 
     ```console
-    uv add --dev callscope
+    uv add --dev pycallscope
     ```
 
 === "Poetry"
 
     ```console
-    poetry add --group dev callscope
+    poetry add --group dev pycallscope
     ```
 
 === "pip"
 
     ```console
-    pip install callscope
+    pip install pycallscope
     ```
 
 ## 2. Run your program through callscope
